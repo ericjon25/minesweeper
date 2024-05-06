@@ -210,6 +210,13 @@ def play(dim_size=10, num_bombs=10):
         # let's reveal the whole board!
         board.dug = [(r,c) for r in range(board.dim_size) for c in range(board.dim_size)]
         print(board)
+    
+        play_again = input("Would you like to play again? (Y/N): ")
+    
+        if play_again.upper() == 'Y':
+            play()
+        elif play_again.upper() == 'N':
+            return
 
 if __name__ == '__main__': # good practice :)
     play()
